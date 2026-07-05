@@ -19,29 +19,81 @@
 <main>
   <section class="page-hero">
     <div class="container">
-      <h1>Kontakt</h1>
-      <p>Pozovite nas ili pošaljite upit — odgovaramo brzo, sa konkretnom ponudom za vašu grupu i rutu.</p>
+      <h1>Zatražite ponudu</h1>
+      <p>Popunite formu za angažovanje autobusa — izaberite vozilo, termin i relaciju, pa vam se javljamo sa ponudom. Ili nas jednostavno pozovite.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="contact-grid">
-        <a class="card contact-card js-tel-link">
-          <div class="card-icon">📞</div>
-          <h3>Telefon</h3>
-          <p class="js-phone"></p>
-        </a>
-        <a class="card contact-card js-mail-link">
-          <div class="card-icon">✉️</div>
-          <h3>E-mail</h3>
-          <p class="js-email"></p>
-        </a>
-        <div class="card contact-card">
-          <div class="card-icon">📍</div>
-          <h3>Adresa</h3>
-          <p>Vojvode Stepe 59, Čačak</p>
-        </div>
+      <div class="upit-layout">
+        <form class="upit-forma" id="upit-forma" novalidate>
+          <div class="polje">
+            <label for="f-ime">Ime i prezime *</label>
+            <input id="f-ime" name="ime" required>
+          </div>
+          <div class="polje-red">
+            <div class="polje">
+              <label for="f-tel">Telefon *</label>
+              <input id="f-tel" name="telefon" inputmode="tel" required>
+            </div>
+            <div class="polje">
+              <label for="f-mail">E-mail</label>
+              <input id="f-mail" name="email" type="email">
+            </div>
+          </div>
+          <div class="polje">
+            <label for="f-bus">Autobus</label>
+            <select id="f-bus" name="autobus">
+              <option value="">Nisam siguran — predložite mi</option>
+            </select>
+          </div>
+          <div class="polje-red">
+            <div class="polje">
+              <label for="f-polazak">Datum polaska</label>
+              <input id="f-polazak" name="polazak" type="date">
+            </div>
+            <div class="polje">
+              <label for="f-povratak">Datum povratka</label>
+              <input id="f-povratak" name="povratak" type="date">
+            </div>
+          </div>
+          <div class="polje-red">
+            <div class="polje">
+              <label for="f-relacija">Relacija (od – do)</label>
+              <input id="f-relacija" name="relacija" placeholder="npr. Čačak – Budva">
+            </div>
+            <div class="polje">
+              <label for="f-putnici">Broj putnika</label>
+              <input id="f-putnici" name="putnici" type="number" min="1" placeholder="npr. 45">
+            </div>
+          </div>
+          <div class="polje">
+            <label for="f-poruka">Napomena</label>
+            <textarea id="f-poruka" name="poruka" rows="4" placeholder="Dodatne informacije o putovanju (broj noćenja, ponuda po osobi, poseban zahtev...)"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">✉️ Pošalji upit</button>
+          <p class="forma-note">Klikom na „Pošalji upit" otvara se vaš mejl program sa već popunjenom porukom — samo je pošaljite. Ili nas pozovite na <a class="js-tel-link" style="color:var(--blue);font-weight:700"><span class="js-phone"></span></a>.</p>
+          <div class="forma-ok" id="forma-ok">Hvala! Otvorili smo vaš mejl program sa popunjenim upitom — pošaljite poruku i javljamo vam se ubrzo.</div>
+        </form>
+
+        <aside class="upit-aside">
+          <div class="card">
+            <div class="card-icon">📞</div>
+            <h3>Telefon</h3>
+            <p><a class="js-tel-link"><span class="js-phone"></span></a></p>
+          </div>
+          <div class="card">
+            <div class="card-icon">✉️</div>
+            <h3>E-mail</h3>
+            <p><a class="js-mail-link"><span class="js-email"></span></a></p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📍</div>
+            <h3>Adresa</h3>
+            <p class="malo">Vojvode Stepe 59, Čačak</p>
+          </div>
+        </aside>
       </div>
     </div>
   </section>

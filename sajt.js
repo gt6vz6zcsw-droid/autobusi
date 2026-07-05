@@ -158,8 +158,8 @@ function prikaziBusDetalj() {
           <h3>Oprema</h3>
           <ul class="oprema">${b.oprema.map(o => `<li>${o}</li>`).join("")}</ul>
           <div class="detalj-cta">
-            <a class="btn btn-primary js-tel-link">📞 Pozovi za ovaj autobus</a>
-            <a class="btn btn-ghost-dark" href="vozni-park.html">← Svi autobusi</a>
+            <a class="btn btn-primary" href="kontakt.html?bus=${b.id}">✉️ Pošalji upit za ovaj autobus</a>
+            <a class="btn btn-ghost-dark js-tel-link">📞 Pozovi</a>
           </div>
         </div>
       </div>
@@ -200,6 +200,53 @@ function ucitajGaleriju(slug) {
   }
 }
 
+// --- Forma za upit (kontakt.html) ---
+function podesiUpitFormu() {
+  const forma = document.getElementById("upit-forma");
+  if (!forma) return;
+  const izbor = document.getElementById("f-bus");
+
+  // popuni spisak autobusa
+  BUSES.forEach(b => {
+    const o = document.createElement("option");
+    o.value = b.naziv;
+    o.textContent = `${b.naziv} (${b.mesta} mesta)`;
+    izbor.appendChild(o);
+  });
+
+  // pretpopuni autobus ako se došlo sa stranice vozila (kontakt.html?bus=id)
+  const busId = new URLSearchParams(location.search).get("bus");
+  if (busId) {
+    const b = BUSES.find(x => x.id === busId);
+    if (b) izbor.value = b.naziv;
+  }
+
+  forma.addEventListener("submit", e => {
+    e.preventDefault();
+    const v = n => (forma.elements[n]?.value || "").trim();
+    if (!v("ime") || !v("telefon")) {
+      alert("Molimo unesite bar ime i telefon.");
+      return;
+    }
+    const red = (labela, vr) => vr ? `${labela}: ${vr}\n` : "";
+    const telo =
+      red("Ime i prezime", v("ime")) +
+      red("Telefon", v("telefon")) +
+      red("E-mail", v("email")) +
+      red("Autobus", v("autobus")) +
+      red("Datum polaska", v("polazak")) +
+      red("Datum povratka", v("povratak")) +
+      red("Relacija", v("relacija")) +
+      red("Broj putnika", v("putnici")) +
+      red("Napomena", v("poruka"));
+    const naslov = `Upit za angažovanje autobusa — ${v("ime")}`;
+    const link = `mailto:${KONTAKT.email}?subject=${encodeURIComponent(naslov)}&body=${encodeURIComponent(telo)}`;
+    window.location.href = link;
+    const ok = document.getElementById("forma-ok");
+    if (ok) ok.style.display = "block";
+  });
+}
+
 // --- Strukturirani podaci za Google ---
 function dodajStructuredData() {
   const ld = {
@@ -226,5 +273,6 @@ document.addEventListener("DOMContentLoaded", () => {
   prikaziIzdvojene();
   prikaziVozniPark();
   prikaziBusDetalj();
+  podesiUpitFormu();
   dodajStructuredData();
 });
