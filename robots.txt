@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://autobusi.co.rs/sitemap.xml

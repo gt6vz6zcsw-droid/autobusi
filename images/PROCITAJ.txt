@@ -1,0 +1,14 @@
+Ovde ubaci fotografije autobusa, sa TAČNO ovim imenima fajlova
+(sajt ih automatski prikaže čim postoje — ništa drugo ne treba menjati):
+
+  van-hool-astromega.jpg   - Van Hool TD 927 Astromega (93 mesta)
+  van-hool-t8-astro.jpg    - Van Hool T8 TD 927 Astro (89 mesta)
+  bova-magiq-72.jpg        - Bova Magiq (72 mesta)
+  vdl-bova-magiq.jpg       - VDL Bova Magiq (67 mesta)
+  bova-futura.jpg          - Bova Futura (65 mesta)
+  neobus-407vt.jpg         - Neobus 407VT (53 mesta)
+  neoplan-cityliner.jpg    - Neoplan Cityliner (52 mesta)
+  mercedes-sprinter.jpg    - Mercedes Sprinter 518 CDI (19 mesta)
+
+Preporuka: vodoravne fotografije (šire nego više), do 500 KB po slici.
+Dok slike ne postoje, na sajtu stoji ikonica autobusa - ništa nije pokvareno.
