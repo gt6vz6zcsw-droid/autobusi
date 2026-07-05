@@ -17,7 +17,7 @@ ID-jevi autobusa (tačno ovako, malim slovima, sa crticama):
     bova-futura            -> Bova Futura (65)
     neobus-407vt           -> Neobus 407VT (53)
     neoplan-cityliner      -> Neoplan Cityliner (52)
-    mercedes-sprinter      -> Mercedes Sprinter 518 CDI (19+1)
+    mercedes-sprinter      -> Mercedes Sprinter 518 CDI (20)
 
 PRIMER: za Astromegu ubaci:
     van-hool-astromega-1.jpg   (glavna)

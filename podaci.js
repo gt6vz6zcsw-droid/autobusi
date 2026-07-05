@@ -21,22 +21,22 @@ const BUSES = [
   {
     id: "van-hool-astromega",
     naziv: "Van Hool TD 927 Astromega",
-    tip: "Spratni (double-decker) autobus",
+    tip: "Dvospratni turistički autobus",
     mesta: "93",
     godiste: 2003,
     gorivo: "Dizel",
-    oprema: ["Dva nivoa sedišta", "Klima uređaj", "Audio i video oprema", "Mikrofon za vodiča", "Veliki prostor za prtljag"],
-    opis: "Naš najveći autobus — spratni Van Hool Astromega sa 93 mesta, idealan za velike grupe, ekskurzije i organizovana putovanja. Dva nivoa sedišta pružaju odličan pregled i udobnost na dužim relacijama."
+    oprema: ["Dva nivoa putničkog prostora", "Klima uređaj", "Audio i video oprema", "Mikrofon", "Prostor za prtljag"],
+    opis: "Dvospratni (double-decker) turistički autobus kapaciteta 93 sedišta. Zahvaljujući velikom kapacitetu namenjen je većim grupama na dužim relacijama — organizovanim putovanjima, ekskurzijama i turama u zemlji i inostranstvu."
   },
   {
     id: "van-hool-t8-astro",
     naziv: "Van Hool T8 TD 927 Astro",
-    tip: "Spratni (double-decker) autobus",
+    tip: "Dvospratni turistički autobus",
     mesta: "89",
     godiste: 2002,
     gorivo: "Dizel",
-    oprema: ["Dva nivoa sedišta", "Klima uređaj", "Audio i video oprema", "Mikrofon za vodiča", "Veliki prostor za prtljag"],
-    opis: "Spratni autobus sa 89 mesta — velik kapacitet uz udobnost na oba nivoa. Pogodan za velike grupe na ekskurzijama i putovanjima u zemlji i inostranstvu."
+    oprema: ["Dva nivoa putničkog prostora", "Klima uređaj", "Audio i video oprema", "Mikrofon", "Prostor za prtljag"],
+    opis: "Dvospratni turistički autobus kapaciteta 89 sedišta. Kombinuje visok kapacitet i putnu udobnost na oba nivoa, čime je pogodan za veće grupe na dužim putovanjima."
   },
   {
     id: "bova-magiq",
@@ -45,8 +45,8 @@ const BUSES = [
     mesta: "72",
     godiste: 2007,
     gorivo: "Dizel",
-    oprema: ["Klima uređaj", "Udobna sedišta sa naslonom", "Audio i video oprema", "Mikrofon za vodiča", "Prostor za prtljag"],
-    opis: "Turistički autobus visoke klase sa 72 mesta. Udoban i pouzdan izbor za putovanja, seminare i grupne izlete na svim relacijama."
+    oprema: ["Klima uređaj", "Putnička sedišta sa naslonom", "Audio i video oprema", "Mikrofon", "Prostor za prtljag"],
+    opis: "Turistički autobus kapaciteta 72 sedišta. Pogodan za putovanja, seminare i grupne izlete, uz nivo udobnosti primeren dužim relacijama."
   },
   {
     id: "vdl-bova-magiq",
@@ -55,8 +55,8 @@ const BUSES = [
     mesta: "67",
     godiste: 2006,
     gorivo: "Dizel",
-    oprema: ["Klima uređaj", "Udobna sedišta sa naslonom", "Audio i video oprema", "Mikrofon za vodiča", "Prostor za prtljag"],
-    opis: "Komforan turistički autobus sa 67 mesta. Odličan odnos kapaciteta i udobnosti za srednje i veće grupe."
+    oprema: ["Klima uređaj", "Putnička sedišta sa naslonom", "Audio i video oprema", "Mikrofon", "Prostor za prtljag"],
+    opis: "Turistički autobus kapaciteta 67 sedišta. Odgovara srednjim i većim grupama, uz uravnotežen odnos kapaciteta i putne udobnosti."
   },
   {
     id: "bova-futura",
@@ -65,18 +65,18 @@ const BUSES = [
     mesta: "65",
     godiste: 2006,
     gorivo: "Dizel",
-    oprema: ["Klima uređaj", "Udobna sedišta sa naslonom", "Audio i video oprema", "Mikrofon za vodiča", "Prostor za prtljag"],
-    opis: "Turistički autobus sa 65 mesta, prepoznatljiv po udobnosti i pouzdanosti. Pravi izbor za putovanja i ekskurzije."
+    oprema: ["Klima uređaj", "Putnička sedišta sa naslonom", "Audio i video oprema", "Mikrofon", "Prostor za prtljag"],
+    opis: "Turistički autobus kapaciteta 65 sedišta. Namenjen putovanjima i ekskurzijama srednjih i većih grupa na domaćim i međunarodnim relacijama."
   },
   {
     id: "neobus-407vt",
     naziv: "Neobus 407VT",
-    tip: "Autobus",
+    tip: "Međugradski autobus",
     mesta: "53",
     godiste: 2002,
     gorivo: "Dizel",
-    oprema: ["Klima uređaj", "Udobna sedišta", "Audio oprema", "Prostor za prtljag"],
-    opis: "Autobus sa 53 mesta, pogodan za srednje grupe — izlete, transfere i prevoz na kraćim i dužim relacijama."
+    oprema: ["Klima uređaj", "Putnička sedišta", "Audio oprema", "Prostor za prtljag"],
+    opis: "Autobus kapaciteta 53 sedišta. Pogodan za srednje grupe — izlete, transfere i prevoz na kraćim i srednjim relacijama."
   },
   {
     id: "neoplan-cityliner",
@@ -85,17 +85,17 @@ const BUSES = [
     mesta: "52",
     godiste: 2006,
     gorivo: "Dizel",
-    oprema: ["Klima uređaj", "Udobna sedišta sa naslonom", "Audio i video oprema", "Mikrofon za vodiča", "Prostor za prtljag"],
-    opis: "Neoplan Cityliner sa 52 mesta — udoban turistički autobus, idealan za manje i srednje grupe koje traže komfor na putovanju."
+    oprema: ["Klima uređaj", "Putnička sedišta sa naslonom", "Audio i video oprema", "Mikrofon", "Prostor za prtljag"],
+    opis: "Turistički autobus kapaciteta 52 sedišta. Namenjen manjim i srednjim grupama koje traže putnu udobnost na dužim relacijama."
   },
   {
     id: "mercedes-sprinter",
     naziv: "Mercedes Sprinter 518 CDI",
     tip: "Minibus",
-    mesta: "19+1",
+    mesta: "20",
     godiste: 2007,
     gorivo: "Dizel",
-    oprema: ["Klima uređaj", "Udobna sedišta", "Kompaktan i okretan"],
-    opis: "Minibus Mercedes Sprinter sa 19+1 mesta — savršen za manje grupe, transfere do aerodroma i banja, i kraća putovanja. Ekonomičan i praktičan."
+    oprema: ["Klima uređaj", "Putnička sedišta", "Prostor za prtljag"],
+    opis: "Minibus kapaciteta 20 sedišta. Ekonomično rešenje za manje grupe, transfere do aerodroma i banja, kao i za kraća putovanja."
   }
 ];

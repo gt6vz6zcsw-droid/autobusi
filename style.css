@@ -95,8 +95,14 @@ img { max-width: 100%; display: block; }
 .card p { color: var(--muted); font-size: 0.96rem; }
 .card-icon {
   width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem; background: var(--sky-tint); margin-bottom: 14px;
+  color: var(--blue); background: var(--sky-tint); margin-bottom: 14px;
 }
+.card-icon svg { width: 26px; height: 26px; }
+
+/* ---------- Ikonice ---------- */
+.ico { display: inline-flex; align-items: center; }
+.ico svg { width: 1.05em; height: 1.05em; }
+.btn .ico { margin-right: -1px; }
 
 /* ---------- Fleet cards ---------- */
 .bus-card { padding: 0; overflow: hidden; display: block; transition: transform 0.15s, box-shadow 0.15s; }
@@ -104,9 +110,11 @@ img { max-width: 100%; display: block; }
 .bus-card-body { padding: 16px 20px 20px; }
 .bus-img {
   height: 180px; background: linear-gradient(135deg, var(--blue-deep), var(--blue));
-  display: flex; align-items: center; justify-content: center; font-size: 3.4rem;
+  display: flex; align-items: center; justify-content: center;
   background-size: cover; background-position: center;
 }
+.bus-ico { color: rgba(255, 255, 255, 0.6); }
+.bus-ico svg { width: 58px; height: 58px; }
 .bus-img.has-photo span { display: none; }
 .bus-meta { margin: 4px 0 10px; }
 .bus-meta strong { color: var(--blue); }
@@ -118,9 +126,11 @@ img { max-width: 100%; display: block; }
 .detalj-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; padding-bottom: 60px; align-items: start; }
 .galerija-glavna {
   height: 360px; border-radius: var(--radius); background: linear-gradient(135deg, var(--blue-deep), var(--blue));
-  display: flex; align-items: center; justify-content: center; font-size: 5rem;
+  display: flex; align-items: center; justify-content: center;
   background-size: cover; background-position: center;
 }
+.gal-ikonica { color: rgba(255, 255, 255, 0.55); }
+.gal-ikonica svg { width: 84px; height: 84px; }
 .galerija-glavna.has-photo .gal-ikonica { display: none; }
 .galerija-thumbs { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
 .thumb {
