@@ -1,35 +1,39 @@
-# autobusi.co.rs — sajt firme Viaggio Tours
+# autobusi.co.rs — sajt firme Viaggio Tours Čačak
 
-Statički sajt (HTML/CSS/JS, bez baze i bez servera) — katalog voznog parka,
-usluge i kontakt, da ljudi zovu za prevoz.
+Statički višestranični sajt (HTML/CSS/JS, bez baze i bez servera).
+Katalog voznog parka sa zasebnom stranicom za svaki autobus, usluge i kontakt.
 
-## Fajlovi
+## Stranice
 
-- `index.html` — ceo sajt (jedna stranica sa sekcijama)
-- `style.css` — izgled
-- `script.js` — **OVDE SE MENJA TELEFON I E-MAIL** (blok `KONTAKT` na vrhu)
-- `images/` — fotografije autobusa (vidi `images/PROCITAJ.txt` za imena fajlova)
+- `index.html` — Početna (hero, zašto mi, izdvojeni autobusi)
+- `usluge.html` — Usluge
+- `vozni-park.html` — svih 8 autobusa (klik na autobus → detalji)
+- `autobus.html` — stranica pojedinačnog autobusa (galerija + opis), otvara se sa `?id=...`
+- `o-nama.html`, `kontakt.html`
 
-## Pre objave — obavezno
+## Šta menjaš (i gde)
 
-1. U `script.js` upiši pravi telefon i e-mail (sad su placeholder-i `06X XXX XXXX`).
-2. Proveri broj mesta za Mercedes Sprinter (upisano 19 — proveri u saobraćajnoj).
-3. Ubaci slike autobusa u `images/` (nije obavezno za start, ali mnogo znači).
+**Sve što treba da diraš je u `podaci.js`:**
+- `KONTAKT` — telefon, e-mail, adresa (menja se na jednom mestu, važi svuda)
+- `BUSES` — spisak autobusa: naziv, broj mesta, godište, gorivo, oprema, opis
 
-## Objava na Render (besplatno, bez uspavljivanja)
+`sajt.js` je logika (meni, footer, galerija) — njega ne treba dirati.
 
-1. Napravi GitHub repo i pushuj ovaj folder.
-2. Na Render: **New → Static Site** → izaberi repo.
-   - Build Command: ostavi prazno
-   - Publish Directory: `.`
-3. Kad se sajt digne, u Render → Settings → Custom Domains dodaj
-   `autobusi.co.rs` i `www.autobusi.co.rs`.
-4. Kod registra gde je kupljen domen podesi DNS po uputstvu koje Render
-   prikaže uz svaki domen (A zapis za autobusi.co.rs, CNAME za www).
+## Slike
 
-Static Site na Renderu je besplatan i NE uspavljuje se (za razliku od
-besplatnih web servisa) — za prezentacioni sajt je to idealno.
+- **Logo:** `images/logo.png` (za svetlu podlogu) i `images/logo-white.png` (za tamnu) — ne diraj.
+- **Autobusi:** ubaci u `images/` kao `<id>-1.jpg`, `<id>-2.jpg` ... (do 6 po autobusu).
+  Imena ID-jeva su u `images/PROCITAJ.txt`. Dok slika nema, stoji ikonica.
 
-## Lokalno pokretanje
+## Objava (Render Static Site)
 
-Samo otvori `index.html` u browseru — nema instalacije, nema servera.
+Repo je već povezan sa GitHub-om (`gt6vz6zcsw-droid/autobusi`) i sa Render Static Site.
+**Svaki `git push` automatski osveži živi sajt.** Za povezivanje domena `autobusi.co.rs`
+vidi Render → Settings → Custom Domains (čeka da domen kod registra UNLIMITED.RS
+pređe iz "Na čekanju" u "Aktivan").
+
+## Lokalno
+
+Otvori bilo koju `.html` u browseru — radi bez servera.
+Napomena: pošto se meni i podaci učitavaju JS-om, najbolje je otvoriti sajt preko
+`http://` (npr. `python3 -m http.server`) umesto direktno kao `file://`.
