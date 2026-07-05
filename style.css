@@ -90,6 +90,7 @@ img { max-width: 100%; display: block; }
 
 .grid { display: grid; gap: 22px; }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
 
 .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow-sm); }
 .card p { color: var(--muted); font-size: 0.96rem; }
@@ -204,12 +205,12 @@ img { max-width: 100%; display: block; }
   .galerija-glavna { height: 280px; }
 }
 @media (max-width: 820px) {
-  .grid-3, .contact-grid { grid-template-columns: 1fr 1fr; }
+  .grid-3, .grid-4, .contact-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .upit-layout { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
-  .grid-3, .contact-grid, .footer-grid, .oprema, .polje-red { grid-template-columns: 1fr; }
+  .grid-3, .grid-4, .contact-grid, .footer-grid, .oprema, .polje-red { grid-template-columns: 1fr; }
   .nav-toggle { display: block; }
   .nav-links {
     display: none; position: absolute; top: 70px; left: 0; right: 0; background: #fff;
