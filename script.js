@@ -2,9 +2,9 @@
 // KONTAKT PODACI — izmeni samo ovde, sajt se svuda ažurira sam
 // ============================================================
 const KONTAKT = {
-  telefon: "06X XXX XXXX",        // TODO: upiši pravi broj, npr. "064 123 4567"
-  telefonLink: "+3816XXXXXXXX",   // TODO: isti broj u međunarodnom formatu, bez razmaka
-  email: "kontakt@autobusi.co.rs" // TODO: upiši pravi e-mail
+  telefon: "066 809 7298",
+  telefonLink: "+381668097298",
+  email: "viaggiotours032@outlook.com"
 };
 // ============================================================
 
