@@ -303,6 +303,31 @@ function otvoriLightbox(src) {
   lb.classList.add("open");
 }
 
+// --- Česta pitanja (Usluge) ---
+function prikaziFAQ() {
+  const host = document.querySelector("[data-faq]");
+  if (!host || typeof FAQ === "undefined") return;
+  host.innerHTML = FAQ.map(f => `
+    <details class="faq-item">
+      <summary>${f.p}</summary>
+      <div class="faq-odgovor">${f.o}</div>
+    </details>`).join("");
+  // FAQPage structured data (pomaže na Google-u)
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQ.map(f => ({
+      "@type": "Question",
+      "name": f.p,
+      "acceptedAnswer": { "@type": "Answer", "text": f.o }
+    }))
+  };
+  const s = document.createElement("script");
+  s.type = "application/ld+json";
+  s.textContent = JSON.stringify(ld);
+  document.head.appendChild(s);
+}
+
 // --- Strukturirani podaci za Google ---
 function dodajStructuredData() {
   const ld = {
@@ -331,6 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
   prikaziBusDetalj();
   podesiUpitFormu();
   prikaziGaleriju();
+  prikaziFAQ();
   dodajStructuredData();
   renderIcons(document);
 });

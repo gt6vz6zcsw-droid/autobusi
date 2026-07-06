@@ -99,3 +99,44 @@ const BUSES = [
     opis: "Minibus kapaciteta 20 sedišta. Ekonomično rešenje za manje grupe, transfere do aerodroma i banja, kao i za kraća putovanja."
   }
 ];
+
+// --- Česta pitanja (prikazuju se na stranici Usluge) -----------------
+//  Slobodno dodaj, izmeni ili obriši pitanja. p = pitanje, o = odgovor.
+const FAQ = [
+  {
+    p: "Gde sve vozite?",
+    o: "Vozimo u zemlji i inostranstvu, bez ograničenja destinacije — od jednodnevnih izleta do višednevnih putovanja širom Evrope."
+  },
+  {
+    p: "Kako se plaća prevoz?",
+    o: "Plaćanje je moguće gotovinom, uz fiskalni račun, ili preko računa — uz fiskalni račun ili SEF fakturu. Radimo sa fizičkim licima, firmama i agencijama."
+  },
+  {
+    p: "Koliko unapred treba rezervisati autobus?",
+    o: "Zavisi od termina. U toku sezone pojedine autobuse je potrebno rezervisati i mesec dana unapred, pa preporučujemo da nas kontaktirate na vreme."
+  },
+  {
+    p: "Šta je uključeno u cenu?",
+    o: "U cenu ture uključeni su prevoz i vozač. Troškove putarine, čekpointa i sličnih dažbina snosi korisnik prevoza, ukoliko nije drugačije dogovoreno."
+  },
+  {
+    p: "Da li na dužim relacijama idu dva vozača?",
+    o: "Da. Na dužim relacijama angažujemo dva vozača, u skladu sa propisima o radnom vremenu i odmoru posade vozila."
+  },
+  {
+    p: "Koliko putnika možete da prevezete?",
+    o: "Najveći autobus prima 93 putnika. Za veće grupe angažujemo više vozila, a za manje grupe na raspolaganju je i minibus."
+  },
+  {
+    p: "Da li organizujete đačke ekskurzije?",
+    o: "Da — to je jedna od naših primarnih delatnosti. Pored autobuskog prevoza, u okviru turističke agencije Viaggio Travel organizujemo i same ekskurzije, uz svu potrebnu dokumentaciju."
+  },
+  {
+    p: "Šta ako se putovanje otkaže?",
+    o: "Otkazivanje rešavamo dogovorno, uz blagovremeno obaveštenje o otkazu."
+  },
+  {
+    p: "Radite li jednodnevne i višednevne ture?",
+    o: "Da, organizujemo i jednodnevne i višednevne ture."
+  }
+];

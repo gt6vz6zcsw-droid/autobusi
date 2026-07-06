@@ -221,6 +221,18 @@ img { max-width: 100%; display: block; }
 #lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 10px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); }
 .lb-close { position: absolute; top: 16px; right: 26px; color: #fff; font-size: 2.6rem; line-height: 1; cursor: pointer; font-weight: 300; }
 
+/* ---------- Česta pitanja (FAQ) ---------- */
+.faq { display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-sm); overflow: hidden; }
+.faq-item summary {
+  cursor: pointer; padding: 18px 22px; font-weight: 700; color: var(--blue-deep);
+  list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 14px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-size: 1.5rem; font-weight: 400; color: var(--blue); transition: transform 0.2s; }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-odgovor { padding: 0 22px 18px; color: var(--muted); }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--blue-deep); color: #b3cee4; padding: 48px 0 22px; font-size: 0.92rem; margin-top: auto; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 30px; padding-bottom: 26px; }
