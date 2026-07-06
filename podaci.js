@@ -20,7 +20,7 @@ const KONTAKT = {
 const BUSES = [
   {
     id: "van-hool-astromega",
-    naziv: "Van Hool TD 927 Astromega",
+    naziv: "Van Hool Astromega",
     tip: "Dvospratni turistički autobus",
     mesta: "93",
     godiste: 2003,
@@ -30,7 +30,7 @@ const BUSES = [
   },
   {
     id: "van-hool-t8-astro",
-    naziv: "Van Hool T8 TD 927 Astro",
+    naziv: "Van Hool Astromega",
     tip: "Dvospratni turistički autobus",
     mesta: "89",
     godiste: 2002,
@@ -40,7 +40,7 @@ const BUSES = [
   },
   {
     id: "bova-magiq",
-    naziv: "Bova Magiq",
+    naziv: "VDL Bova Magiq",
     tip: "Turistički autobus",
     mesta: "72",
     godiste: 2007,
@@ -60,7 +60,7 @@ const BUSES = [
   },
   {
     id: "bova-futura",
-    naziv: "Bova Futura",
+    naziv: "VDL Bova Futura",
     tip: "Turistički autobus",
     mesta: "65",
     godiste: 2006,
@@ -70,7 +70,7 @@ const BUSES = [
   },
   {
     id: "neobus-407vt",
-    naziv: "Neobus 407VT",
+    naziv: "Neobus 407 VT",
     tip: "Međugradski autobus",
     mesta: "53",
     godiste: 2002,
@@ -90,7 +90,7 @@ const BUSES = [
   },
   {
     id: "mercedes-sprinter",
-    naziv: "Mercedes Sprinter 518 CDI",
+    naziv: "Mercedes Sprinter",
     tip: "Minibus",
     mesta: "20",
     godiste: 2007,
