@@ -1,0 +1,12 @@
+SLIKE ZA GALERIJU (stranica "Galerija")
+=======================================
+
+Ovde ubaci fotografije sa putovanja, nazvane brojevima:
+
+    1.jpg , 2.jpg , 3.jpg , 4.jpg ...   (do 40 komada)
+
+Prikazuju se u mreži, a klikom se uvećavaju preko celog ekrana.
+Redosled na sajtu prati redosled brojeva (1, 2, 3 ...).
+
+Preporuka: vodoravne fotografije, do ~500 KB po slici.
+Dok slika nema, na stranici piše da se galerija uskoro popunjava.

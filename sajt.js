@@ -33,6 +33,7 @@ const NAV = [
   ["index.html", "Početna"],
   ["usluge.html", "Usluge"],
   ["vozni-park.html", "Vozni park"],
+  ["galerija.html", "Galerija"],
   ["o-nama.html", "O nama"],
   ["kontakt.html", "Kontakt"]
 ];
@@ -265,6 +266,43 @@ function podesiUpitFormu() {
   });
 }
 
+// --- Galerija sa putovanja (galerija.html) ---
+//  Slike idu u  images/galerija/1.jpg, 2.jpg, 3.jpg ...  (do 40 komada)
+function prikaziGaleriju() {
+  const host = document.querySelector("[data-galerija-grid]");
+  if (!host) return;
+  const prazno = document.getElementById("galerija-prazno");
+  for (let i = 1; i <= 40; i++) {
+    const src = `images/galerija/${i}.jpg`;
+    const img = new Image();
+    img.onload = () => {
+      if (prazno) prazno.style.display = "none";
+      const cell = document.createElement("a");
+      cell.className = "gal-cell";
+      cell.href = src;
+      cell.style.backgroundImage = `url('${src}')`;
+      cell.dataset.i = i;
+      cell.addEventListener("click", e => { e.preventDefault(); otvoriLightbox(src); });
+      const posle = [...host.children].find(c => +c.dataset.i > i);
+      host.insertBefore(cell, posle || null);
+    };
+    img.src = src;
+  }
+}
+
+function otvoriLightbox(src) {
+  let lb = document.getElementById("lightbox");
+  if (!lb) {
+    lb = document.createElement("div");
+    lb.id = "lightbox";
+    lb.innerHTML = `<span class="lb-close" aria-label="Zatvori">&times;</span><img alt="">`;
+    lb.addEventListener("click", () => lb.classList.remove("open"));
+    document.body.appendChild(lb);
+  }
+  lb.querySelector("img").src = src;
+  lb.classList.add("open");
+}
+
 // --- Strukturirani podaci za Google ---
 function dodajStructuredData() {
   const ld = {
@@ -292,6 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
   prikaziVozniPark();
   prikaziBusDetalj();
   podesiUpitFormu();
+  prikaziGaleriju();
   dodajStructuredData();
   renderIcons(document);
 });
